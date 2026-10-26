@@ -1,0 +1,7 @@
+{"op":"add","path":"/root","value":"page"}
+{"op":"add","path":"/elements/page","value":{"type":"Section","props":{"layout":"grid"},"children":["revenue","orders","approvals","toolbar"]}}
+{"op":"add","path":"/elements/revenue","value":{"type":"StatTile","props":{"label":"Total Revenue","value":{"$state":"/data/metrics/revenue/value"},"trend":{"$state":"/data/metrics/revenue/trend"}}}}
+{"op":"add","path":"/elements/orders","value":{"type":"Table","props":{"columns":{"$state":"/data/orderColumns"},"rows":{"$state":"/data/orders"}}}}
+{"op":"add","path":"/elements/approvals","value":{"type":"ApprovalsPanel","props":{"title":"Pending Approvals","items":{"$state":"/data/approvals"}}}}
+{"op":"add","path":"/elements/toolbar","value":{"type":"Toolbar","props":{},"children":["refresh"]}}
+{"op":"add","path":"/elements/refresh","value":{"type":"Button","props":{"label":"Refresh Data"},"on":{"press":{"action":"refresh_data"}}}}

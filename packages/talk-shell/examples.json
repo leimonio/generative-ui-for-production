@@ -1,0 +1,47 @@
+{
+  "brand": "gen-ui",
+  "axes": [
+    "Depth 1",
+    "Depth 2",
+    "Depth 3"
+  ],
+  "examples": [
+    {
+      "id": "01",
+      "slug": "01-selection-single-tool",
+      "depths": [
+        "Depth 1"
+      ],
+      "title": "One tool, one widget",
+      "pattern": "One tool = one flat component. The model only fills params; there is no routing decision."
+    },
+    {
+      "id": "02",
+      "slug": "02-selection-orchestration",
+      "depths": [
+        "Depth 1"
+      ],
+      "title": "One chat, four widgets",
+      "pattern": "Several tools = several widgets. The model has to route, and routing can go wrong."
+    },
+    {
+      "id": "03",
+      "slug": "03-selection-design-system",
+      "depths": [
+        "Depth 1"
+      ],
+      "title": "Four widgets on a design system",
+      "pattern": "Four tools, four widgets, built on shadcn/ui. The model picks a tool and fills its input; the client's component map brings the design system."
+    },
+    {
+      "id": "04",
+      "slug": "04-composition-json-render",
+      "depths": [
+        "Depth 2",
+        "Depth 3"
+      ],
+      "title": "Dashboard on json-render",
+      "pattern": "The model composes a dashboard from a shadcn/ui catalog: a flat {root, elements} spec streamed per node, $state data binding, on.* actions."
+    }
+  ]
+}

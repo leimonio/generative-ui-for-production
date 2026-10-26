@@ -1,0 +1,32 @@
+{
+  "name": "@gen-ui/talk-shell",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared page layout for the gen-ui talk examples (json-render.dev layout, monday template palette).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./styles.css",
+    "./examples.json": "./examples.json"
+  },
+  "files": [
+    "src",
+    "styles.css",
+    "examples.json"
+  ],
+  "scripts": {
+    "release": "./release.sh"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+Source: the two MetricTile functions in d1-ds-swap.tsx (type-checked), shown as a diff for the slide.
+Both are named MetricTile, as in the real files. Update this file whenever d1-ds-swap.tsx changes.
+--- 02-selection-orchestration/app/components.tsx
++++ 03-selection-design-system/app/components.tsx
+@@ -1,8 +1,16 @@
+ export function MetricTile({ label, value, delta }: Metric) {
++  const up = !delta.startsWith("-");
+   return (
+-    <div className="widget">
+-      <div className="widget-label">{label}</div>
+-      <strong className="widget-value">{value}</strong> {delta}
+-    </div>
++    <Card className={up ? "border-l-4 border-l-emerald-500" : "border-l-4 border-l-rose-500"}>
++      <CardHeader>
++        <CardTitle>{label}</CardTitle>
++      </CardHeader>
++      <CardContent>
++        <span className="text-4xl font-bold">{value}</span>
++        <Badge className={up ? "bg-emerald-500/15 text-emerald-400" : "bg-rose-500/15 text-rose-400"}>
++          {up ? "▲" : "▼"} {delta}
++        </Badge>
++      </CardContent>
++    </Card>
+   );
+ }
